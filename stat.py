@@ -44,11 +44,9 @@ def main():
    input_count = input("请输入3或4: ")
    inputstring = ''
    if input_count == 3:
-     var1,var2,var3 = raw_input("请输入一个序列(%d个0到2的数，以空格隔开): " % input_count).split()
-     inputstring = var1+var2+var3
+     inputstring = raw_input("请输入一个序列(3个0到2的数，以空格隔开): ")
    elif input_count == 4:
-     var1,var2,var3,var4 = raw_input("请输入一个序列(4个0到2的数，以空格隔开): ").split()
-     inputstring = var1+var2+var3+var4
+     inputstring = raw_input("请输入一个序列(4个0到2的数，以空格隔开): ")
    else:
      assert inputstring, '输入错误，请重新输入'
 
