@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 import  xdrlib ,sys
 import xlrd
-def open_excel(file= 'file.xls'):
+def open_excel(file):
     try:
         data = xlrd.open_workbook(file)
         return data
@@ -31,11 +31,12 @@ def occurrences(string, sub, input_count):
 
 
 def main():
-
+   name = raw_input('请输入文件名：')
+   name = name + '.xls'
    col_count = input('请输入列数: ')
    row_count = input('请输入行数: ')
    # print col_count
-   data = excel_table_byname(file='file.xls', by_name=u'Sheet1', index=col_count,row_count=row_count)
+   data = excel_table_byname(file=name, by_name=u'Sheet1', index=col_count,row_count=row_count)
 
    data = [str(int(i)) for i in data]
    datastring = ''.join(data)
