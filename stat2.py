@@ -43,12 +43,10 @@ def main():
            data = [str(int(i)) for i in data]
            datastring = ''.join(data)
            
-           input_count = input("请输入3或4: ")
+           input_count = input("请输入2或3或4: ")
            inputstring = ''
-           if input_count == 3:
+           if input_count == 2 or inputstring == 3 or inputstring == 4:
              inputstring = raw_input("请输入一个序列(3个0到9的数，以空格隔开): ")
-           elif input_count == 4:
-             inputstring = raw_input("请输入一个序列(4个0到9的数，以空格隔开): ")
            else:
              assert inputstring, '输入错误，请重新输入'
 
