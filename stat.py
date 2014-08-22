@@ -43,16 +43,17 @@ def main():
            data = [str(int(i)) for i in data]
            datastring = ''.join(data)
            
-           input_count = input("请输入2或3或4: ")
+           input_count = input("请输入(2-6): ")
            inputstring = ''
-           if input_count == 2 or input_count == 3 or input_count == 4:
+           if input_count == 2 or input_count == 3 or input_count == 4 or input_count == 5 or input_count == 6:
              inputstring = raw_input("请输入一个序列: ")
            else:
-             assert inputstring, '输入错误，请重新输入'
+             assert inputstring, '输入有误，请重新输入2-6之间的整数'
 
-##           print inputstring
-##           print datastring
-##           print len(datastring)
+
+           # print inputstring
+           # print datastring
+           # print len(datastring)
 
            count,result =  occurrences(datastring,inputstring,input_count)
 
@@ -85,7 +86,7 @@ def main():
                      'four': four, 'five': five, 'six': six, 'seven': seven,
                      'eight': eight, 'nine': nine}
 
-##           print counts
+          # print counts
            firstline = '在第%d列中' + inputstring + '一共出现了%d次'
            print firstline % (col_count, count)
            print '0出现了%(zero)s次' % counts
